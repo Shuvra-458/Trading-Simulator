@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from . import models, database
 from .routes import users, trading
 from app.routes import stocks
+import pymysql
+pymysql.install_as_MySQLdb()
+
 
 app = FastAPI(title="Trading Simulator API")
 
