@@ -10,7 +10,7 @@ pymysql.install_as_MySQLdb()
 app = FastAPI(title="Trading Simulator API")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://trading-simulator-git-master-shuvras-projects.vercel.app"],
+    allow_origins=["*","https://trading-simulator-git-master-shuvras-projects.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
