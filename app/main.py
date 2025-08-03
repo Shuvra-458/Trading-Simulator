@@ -7,6 +7,13 @@ pymysql.install_as_MySQLdb()
 
 
 app = FastAPI(title="Trading Simulator API")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 models.Base.metadata.create_all(bind=database.engine)
 
