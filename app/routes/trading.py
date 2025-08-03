@@ -29,7 +29,7 @@ def execute_trade(trade: schemas.TradeCreate,
     portfolio_item = db.query(models.Portfolio).filter_by(user_id=user.id, symbol=symbol).first()
 
     # Handle BUY trade
-    if trade_type == TradeType.BUY:
+    if trade_type == TradeType.buy:
         total_cost = price * quantity
 
         if user.balance < total_cost:
@@ -54,7 +54,7 @@ def execute_trade(trade: schemas.TradeCreate,
             db.add(portfolio_item)
 
     # Handle SELL trade
-    elif trade_type == TradeType.SELL:
+    elif trade_type == TradeType.sell:
         if not portfolio_item or portfolio_item.quantity < quantity:
             raise HTTPException(status_code=400, detail="Not enough shares to sell.")
 
