@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from . import models, database
 from .routes import users, trading
 from app.routes import stocks
+from fastapi.middleware.cors import CORSMiddleware
 import pymysql
 pymysql.install_as_MySQLdb()
 
