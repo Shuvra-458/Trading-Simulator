@@ -2,6 +2,7 @@ fastapi
 python-multipart
 pymysql
 uvicorn
+finnhub-python
 python-dotenv
 sqlalchemy
 passlib[bcrypt]
