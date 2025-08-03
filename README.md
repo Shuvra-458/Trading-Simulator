@@ -10,15 +10,15 @@ A FastAPI-powered backend that simulates real-time stock trading using live pric
 - Fully modular and production-ready
 
 ## Tech Stack
-- FastAPI + Pydantic
-- SQLAlchemy + SQLite (dev) / PostgreSQL (prod)
+- Python(FastAPI + PyDantic)
+- MySQL
 - JWT Auth
 - Finnhub API
 
 ## Getting Started
 
 ```bash
-git clone https://github.com/yourusername/trading-simulator.git
+git clone https://github.com/Shuvra-458/trading-simulator.git
 cd trading-simulator
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate on Windows
